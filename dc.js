@@ -21,4 +21,4 @@
 <script type="text/javascript">
                     if (embed) {document.write('<iframe class="embed-responsive-item" frameborder="0"height="100%"sandbox="allow-same-origin allow-top-navigation allow-forms allow-scripts" allow="autoplay; encrypted-media"style="position: absolute;" width="100%" allowfullscreen src="" scrolling="no" frameBorder="0" title="Reproductor 1" alt="Reproducir" allowfullscreen></iframe>')}
                         </script></div>
-</div>
+
