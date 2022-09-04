@@ -71,10 +71,10 @@ var hostname = extractHostname(document.referrer);
 var blackdomains = "google.com";
 var blacklist = blackdomains.split(","); 
 
-var whitedomains = "elfideo.top,us.soloveo.net,www.futbollibretv.net,www.vipboxtv.org";
+var whitedomains = "elfideo.top,us.soloveo.net,www.futbollibre.xyz,www.futbollibretv.net,www.vipboxtv.org";
 var whitelist = whitedomains.split(",");
 
 if (isInArray(hostname, blacklist) || !isInArray(hostname, whitelist) || !document.referrer) {
-  document.location.href = "https://us.soloveo.net/";
+  document.location.href = "https://www.futbollibre.xyz";
 }
 </script>
