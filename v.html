@@ -62,31 +62,3 @@ eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/
       redirect: '/'
     })
   </script>
-<script>
-function isInArray(value, array) {
-  return array.indexOf(value) > -1;
-};
-
-function extractHostname(url) {
-  var hostname;
-  if (url.indexOf("://") > -1) {
-    hostname = url.split("/")[2];
-  } else {
-    hostname = url.split("/")[0];
-  };
-  hostname = hostname.split(":")[0];
-  hostname = hostname.split("?")[0];
-  return hostname;
-};
-
-var hostname = extractHostname(document.referrer);
-var blackdomains = "google.com";
-var blacklist = blackdomains.split(","); 
-
-var whitedomains = "elfideo.top,us.soloveo.net,www.futbollibre.xyz,www.futbollibretv.net,www.vipboxtv.org";
-var whitelist = whitedomains.split(",");
-
-if (isInArray(hostname, blacklist) || !isInArray(hostname, whitelist) || !document.referrer) {
-  document.location.href = "https://www.futbollibre.xyz";
-}
-</script>
