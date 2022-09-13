@@ -1,4 +1,28 @@
-<meta charset="utf-8">
+
+    <script type="text/javascript">
+         function getParameterByName(name) {
+             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                 results = regex.exec(location.search);
+             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+         }
+          id = getParameterByName('p');
+         if(getParameterByName('embed')){
+            embed = getParameterByName('embed');
+         }else{
+            if(getParameterByName('r')){
+                embed = getParameterByName('r');
+             }else{
+                embed = false;
+         }  
+         }
+
+      </script> 
+<div style="overflow: hidden; padding-bottom: 56.25%; position: relative;">
+<script type="text/javascript">
+                    if (embed) {document.write('<iframe class="embed-responsive-item" frameborder="0"height="100%"sandbox="allow-same-origin allow-top-navigation allow-forms allow-scripts" allow="autoplay; encrypted-media"style="position: absolute;" width="100%" allowfullscreen src="'+atob(embed)+'" scrolling="no" frameBorder="0" title="Reproductor 1" alt="Reproducir" allowfullscreen></iframe>')}
+                        </script></div>
+<!--<meta charset="utf-8">
 <meta name=referrer content=no-referrer>
 <meta http-equiv=cache-control content="max-age=0" />
 <meta http-equiv=cache-control content=no-cache />
@@ -43,4 +67,4 @@ xhttp.onreadystatechange = function() {
 						});
 	}
 }
-</script>
+</script-->
