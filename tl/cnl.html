@@ -1,0 +1,164 @@
+
+<style type="text/css">
+body {
+   margin: 0;
+   padding: 0;
+}
+</style>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+<meta http-equiv="pragma" content="no-cache" />
+<script src="//ssl.p.jwpcdn.com/player/v/8.21.0/jwplayer.js"></script>
+<script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';</script>
+<body>
+<script type="text/javascript">
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+	var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+var getURL = getParameterByName('get');
+var getLang = getParameterByName('lang');
+if (getURL == "#") {alert('Vuelve a la p�gina anterior');}
+</script>
+<div id="player"></div>
+<script>
+var playerInstance= jwplayer("player");
+
+if (getURL == "ESPN2_Arg")
+	number = 6;
+else
+if (getURL == "C5N")
+	number = 7;
+else
+	number = 3;
+
+var mpd = "https://edge-live17-sl.cvattv.com.ar/live/c"+number+"eds/"+getURL+"/SA_Live_dash_enc_2A/"+getURL+".mpd";
+
+if (getURL == "ESPN2HD")
+{
+	keyId = "e884b711ab111beb8a7ba1e7bcbdc9bf";
+	key = "cb89ee3961599e3e648a5aad60895f34";
+}
+else if (getURL == "ESPN2_Arg")
+{
+	keyId = "65a5bfa3c7a72dde60be9b0c7406c8fc";
+	key = "0b40ae9f78a7bac3b57ecbf72d3c081e";
+}
+else if (getURL == "ESPN3")
+{
+	keyId = "f4c9f97e2a36feab0e5077f2b44cbc4e";
+	key = "1743cd03dfe3736b2c95da91a783af38";
+}
+else if (getURL == "FoxSports")
+{
+	keyId = "8ad99f6512d50476639052a8fe8a4676";
+	key = "5ff3bee4cff05d3400d7ea60fcc93235";
+}
+else if (getURL == "FoxSports2HD")
+{
+	keyId = "c98ddffc470fe449ae1a8d6492116976";
+	key = "5086d370e840010232cf4532b16e197f";
+}
+else if (getURL == "FoxSports3HD")
+{
+	keyId = "55b47390cf9e4997dae6dac85e057875";
+	key = "fa39e855543c5d70f30600d59e5e4c1b";
+}
+else if (getURL == "TyCSport")
+{
+	keyId = "ec7ac96ab5f8a5d244e213614cbb4438";
+	key = "54420ff71bb5805931ac6eef7d9816c9";
+}
+else if (getURL == "TNT_Sports_HD")
+{
+	keyId = "f7c8d3ea42f2a4da3b1423a32397bd3a";
+	key = "90e6e0d8b1d988b6151220ee6eb2e56e";
+}
+else if (getURL == "Fox_Sports_Premiun_HD")
+{
+	keyId = "0f48f9e79f54b38d619fd25565c4d14b";
+	key = "02828e6346a46e61e965202cd8787e3a";
+}
+else if (getURL == "Canal7")
+{
+	keyId = "a30963123f5ffc32d733bc0d26445c6a";
+	key = "2651574e778c91160307256415ad6666";
+}
+else if (getURL == "DeporTVHD")
+{
+	keyId = "dbd4301ab0af3681be89ccdee78859cc";
+	key = "9e33db27eb3e5a15b5bf3b8b33e297cc";
+}
+else if (getURL == "ESPNHD")
+{
+	keyId = "cc8d44406ed6bf1898ad9f7a2d64f29e";
+	key = "fb85d059687ab0fc67805806204edbdf";
+}
+else if (getURL == "TelefeHD")
+{
+	keyId = "a32c08209d448cffcf2f3c3216d12953";
+	key = "c00894cd264fab3c605c646d61c9fb80";
+}
+else if (getURL == "AmericaTV")
+{
+	keyId = "8ea235ce0826408b221c498115a9b62d";
+	key = "7aa9266ed91ea4510483370029dfcf45";
+} 
+else if (getURL == "Canal9")
+{
+	keyId = "24f4ff211136ae6512a1b552200db405";
+	key = "602122f8426c5c942b8c18d299cc6020";
+} 
+else if (getURL == "C5N")
+{
+	keyId = "050df5c6e78c774e78c3e99eef8a1b29";
+	key = "0e4141d6ab21a36cbc4da777ab3096d4";
+}   
+else if (getURL == "TodoNoticias")
+{
+	keyId = "26e8eb677f908b11b6dd40598a292540";
+	key = "1e65e03ee20731dc99b57a1db9c699dd";
+}   
+     
+    
+playerInstance.setup({
+
+	playlist: [{
+		"sources": [
+			{
+				"default": false,
+				"type": "dash",
+				"file": mpd,
+				"drm": {
+					"clearkey": { "keyId": keyId, "key": key }
+				},
+				"label": "0"
+			}
+		]
+	}],
+	width: "100%",
+	height: "100%",
+	aspectratio: "16:9",
+	autostart: true,
+    logo: {
+ 					 file: '',
+ 					 link: '',
+  						position: 'top-right'
+  					},
+	cast: {},
+	sharing: {}
+});  
+		if (getLang == "") {
+			lang = 1;
+		}
+		jwplayer().on('play', function(e) {
+		  jwplayer().setCurrentAudioTrack(lang);
+		});
+</script>
