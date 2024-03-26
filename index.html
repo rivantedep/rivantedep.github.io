@@ -2,7 +2,7 @@
 <html lang="es" class="dark-mode">
    <head>
       <meta charset="utf-8" />
-      <meta name="theme-color" content="#191B27" />
+    
       <link href=/favicon.png rel=icon>
 	   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -38,7 +38,7 @@
 	   <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/futbollibre.plus/","name":"Fútbol Libre TV"}</script>
       <meta name="viewport" content="width=device-width,initial-scale=1" />
      
-	        <link rel="stylesheet" href="https://futbollibre.plus/assets/vendor/bootstrap-icons/bootstrap-icons.css />
+	        <link rel="stylesheet" href="/css/bootstrap-icons.css />
       <link rel="stylesheet" href="https://futbollibre.plus/assets/vendor/boxicons/css/boxicons.css" />
       <script type="38ecc36e4811cdf3b6a66fc1-text/javascript" src="https://futbollibre.plus/assets/vendor/js/horapro.js?asd"></script>
       <meta name="next-head-count" content="19" />
@@ -255,7 +255,7 @@ function eventos()
 	var x = Math.random().toString(36).substring(7);
 
 	$.ajax({
-		url : "/eventos.json?"+x,
+		url : "https://librefutboltv.net/star-plus/eventos.json?"+x,
 		type : "get",
 		success: function (arr) {
 			var content = '';
